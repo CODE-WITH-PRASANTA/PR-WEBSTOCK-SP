@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Navbar {
+  width: 100%;
+  background: #f4f4f4;
+  border-bottom: 1px solid #d9d9d9;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.Navbar__container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ======================
+   LOGO
+====================== */
+
+.Navbar__logoSection {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #d8d8d8;
+  padding: 6px 20px;
+  flex-shrink: 0;
+}
+
+.Navbar__logo {
+  width: 165px;
+  height: 110px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ======================
+   MENU
+====================== */
+
+.Navbar__menu {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.Navbar__link {
+  text-decoration: none;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.Navbar__link:hover {
+  color: #8b5cf6;
+}
+
+.Navbar__active {
+  color: #111827;
+}
+
+.Navbar__linkIcon {
+  font-size: 16px;
+}
+
+/* ======================
+   RIGHT SECTION
+====================== */
+
+.Navbar__right {
+  width: 240px;
+  height: 60px;
+  border-left: 1px solid #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.Navbar__contactBtn {
+  border: none;
+  background: transparent;
+  color: #111827;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.Navbar__contactBtn:hover {
+  color: #8b5cf6;
+}
+
+.Navbar__contactIcon {
+  color: #a855f7;
+  font-size: 16px;
+}
+
+/* ======================
+   MOBILE TOGGLE
+====================== */
+
+.Navbar__toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  color: #111827;
+  margin-right: 20px;
+}
+
+/* ======================
+   MOBILE MENU
+====================== */
+
+.Navbar__mobileMenu {
+  display: none;
+}
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width: 991px) {
+  .Navbar__menu,
+  .Navbar__right {
+    display: none;
+  }
+
+  .Navbar__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Navbar__logoSection {
+    width: auto;
+    border-right: none;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
+  .Navbar__logo {
+    width: 150px;
+  }
+
+  .Navbar__mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .Navbar__mobileMenu--active {
+    max-height: 500px;
+    padding: 15px 20px;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .Navbar__mobileLink {
+    text-decoration: none;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .Navbar__mobileContactBtn {
+    margin-top: 15px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #a855f7;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 576px) {
+  .Navbar__container {
+    height: 56px;
+  }
+
+  .Navbar__logoSection {
+    height: 56px;
+    padding-left: 15px;
+  }
+
+  .Navbar__logo {
+    width: 130px;
+  }
+
+  .Navbar__toggle {
+    font-size: 28px;
+    margin-right: 15px;
+  }
+}
+
+/* ======================
+   SMALL MOBILE
+====================== */
+
+@media (max-width: 360px) {
+  .Navbar__logo {
+    width: 115px;
+  }
+
+  .Navbar__toggle {
+    font-size: 26px;
+  }
+}
