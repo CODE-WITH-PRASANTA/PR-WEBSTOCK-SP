@@ -1,29 +1,26 @@
-<<<<<<< HEAD
 import React from "react";
-
-
-const Home = () => {
-  return (
-    <>
-     
-    </>
-  );
-};
-
-export default Home;
-=======
-import React from 'react'
-import MainHome from '../../components/MainHome/MainHome'
-import MordenIdea from '../../components/MordenIdea/MordenIdea'
+import "./Home.css";
+import MainHome from "../../Component/MainHome/MainHome";
+import MordenIdea from "../../Component/MordenIdea/MordenIdea";
+import Navbar from "../../Component/Navbar/Navbar";
+import Introducing from "../../Component/Introducing/Introducing";
+import Footer from "../../Component/Footer/Footer";
+import BusinessIdea from "../../Component/BusinessIdea/BusinessIdea";
+import OverView from "../../Component/OverView/OverView";
 
 const Home = () => {
   return (
     <div>
-         <MainHome/>
-          <MordenIdea />
-    </div>
-  )
-}
+      <Navbar />
+      <MainHome />
+      <MordenIdea />
+      <BusinessIdea />
+      <OverView />
+      <Introducing />
+      <Footer />
 
-export default Home
->>>>>>> a48fe3b06cc1d13dfd9465a2f793ed433b8b4117
+    </div>
+  );
+};
+
+export default Home;
