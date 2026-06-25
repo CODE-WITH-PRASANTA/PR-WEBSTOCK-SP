@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.questions-section {
+  width: 100%;
+  background: #dbc3f4;
+  padding: 110px 7%;
+  overflow: hidden;
+}
+
+.questions-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 100px;
+  align-items: flex-start;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.questions-left {
+  padding-top: 30px;
+}
+
+.questions-left h2 {
+  font-size: 54px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #1f1a24;
+  margin-bottom: 24px;
+}
+
+.questions-left p {
+  max-width: 420px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #1f1a24;
+  margin-bottom: 38px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 30px;
+  height: 30px;
+  background: #221c28;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  transition: all 0.35s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.questions-right {
+  width: 100%;
+}
+
+.faq-item {
+  border-top: 1px solid #2b2431;
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid #2b2431;
+}
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30px 0;
+  text-align: left;
+}
+
+.faq-question span {
+  font-size: 23px;
+  font-weight: 700;
+  color: #1f1a24;
+}
+
+.faq-icon {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #2b2431;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  color: #1f1a24;
+
+  flex-shrink: 0;
+
+  transition: all 0.3s ease;
+}
+
+.faq-icon:hover {
+  background: #1f1a24;
+  color: white;
+}
+
+/* Accordion Animation */
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.55s ease;
+}
+
+.faq-answer.show {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+.faq-answer p {
+  max-width: 900px;
+  font-size: 16px;
+  line-height: 2;
+  color: #1f1a24;
+  padding-bottom: 35px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+
+.faq-answer.show p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .questions-container {
+    grid-template-columns: 320px 1fr;
+    gap: 70px;
+  }
+
+  .questions-left h2 {
+    font-size: 46px;
+  }
+
+  .faq-question span {
+    font-size: 21px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .questions-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .questions-left {
+    text-align: center;
+    padding-top: 0;
+  }
+
+  .questions-left p {
+    margin: 0 auto 30px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .questions-section {
+    padding: 80px 20px;
+  }
+
+  .questions-left h2 {
+    font-size: 38px;
+  }
+
+  .questions-left p {
+    font-size: 16px;
+  }
+
+  .faq-question {
+    gap: 15px;
+    padding: 24px 0;
+  }
+
+  .faq-question span {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .faq-answer p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .questions-left h2 {
+    font-size: 32px;
+  }
+
+  .faq-question span {
+    font-size: 16px;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  .social-icons a {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

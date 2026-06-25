@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.plans-section {
+  width: 100%;
+  padding: 80px 5%;
+  background: #f4f4f4;
+}
+
+.plans-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.plans-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #1d1823;
+}
+
+.plans-header h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1d1823;
+  margin-bottom: 35px;
+}
+
+/* Toggle */
+
+.payment-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.payment-toggle span {
+  font-size: 18px;
+  color: #999;
+  font-weight: 500;
+}
+
+.active-text {
+  color: #1d1823 !important;
+}
+
+.toggle-switch {
+  width: 62px;
+  height: 32px;
+  border: 1.5px solid #222;
+  border-radius: 50px;
+  cursor: pointer;
+  background: white;
+  position: relative;
+}
+
+.toggle-circle {
+  width: 24px;
+  height: 24px;
+  background: #e7ef29;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: 0.4s;
+}
+
+.toggle-switch.yearly .toggle-circle {
+  left: 33px;
+}
+
+/* Cards */
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.plan-card {
+  border: 1.5px solid #222;
+  border-radius: 30px;
+  padding: 38px;
+  background: transparent;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card h3 {
+  font-size: 38px;
+  color: #1d1823;
+  margin-bottom: 8px;
+}
+
+.plan-subtitle {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.price-box {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.price {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 700;
+  color: #1d1823;
+}
+
+.month {
+  font-size: 24px;
+  margin-left: 5px;
+  margin-bottom: 8px;
+}
+
+.features-list {
+  list-style: none;
+  flex: 1;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  font-size: 20px;
+}
+
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-size: 12px;
+}
+
+.check {
+  background: #d8bdf7;
+}
+
+.cross {
+  background: #1f1b23;
+  color: white;
+}
+
+/* Purchase Button */
+
+.purchase-btn {
+  width: 170px;
+  height: 58px;
+  border-radius: 50px;
+  border: 1.5px solid #222;
+  background: #d3bbea;
+  color: #1d1823;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  margin-top: 25px;
+  box-shadow: 8px 8px 0 #1d1823;
+}
+
+.purchase-btn:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 3px 3px 0 #1d1823;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .plans-header h2 {
+    font-size: 48px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .plans-section {
+    padding: 60px 20px;
+  }
+
+  .plans-header h2 {
+    font-size: 34px;
+  }
+
+  .payment-toggle {
+    flex-wrap: wrap;
+  }
+
+  .plan-card {
+    padding: 28px;
+    min-height: auto;
+  }
+
+  .price {
+    font-size: 56px;
+  }
+
+  .month {
+    font-size: 18px;
+  }
+
+  .features-list li {
+    font-size: 16px;
+  }
+
+  .purchase-btn {
+    width: 100%;
+    font-size: 18px;
+  }
+}

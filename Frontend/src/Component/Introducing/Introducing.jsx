@@ -26,13 +26,9 @@ const testimonials = [
 const Introducing = () => {
   return (
     <section className="introducing">
-
       <div className="introducing-container">
 
-        {/* LEFT SIDE */}
-
         <div className="left-side">
-
           <div className="left-content">
 
             <h2>
@@ -42,12 +38,11 @@ const Introducing = () => {
             </h2>
 
             <p>
-              Suspendisse quis tincidunt nisi. Praesent faucibus venenatis erat
-              nunc posuere in.
+              Suspendisse quis tincidunt nisi. Praesent faucibus venenatis
+              erat nunc posuere in.
             </p>
 
             <div className="rating">
-
               <div className="stars">
                 <FaStar />
                 <FaStar />
@@ -61,17 +56,12 @@ const Introducing = () => {
               <span className="companies">
                 Loved by 256 companies
               </span>
-
             </div>
 
           </div>
-
         </div>
 
-        {/* RIGHT SIDE */}
-
         <div className="right-side">
-
           {testimonials.map((item) => (
             <div className="testimonial-card" key={item.id}>
 
@@ -80,26 +70,19 @@ const Introducing = () => {
               </div>
 
               <div className="card-content">
-
                 <h3>{item.text}</h3>
 
                 <div className="author">
-
                   <h4>{item.name}</h4>
-
                   <span>{item.company}</span>
-
                 </div>
-
               </div>
 
             </div>
           ))}
-
         </div>
 
       </div>
-
     </section>
   );
 };
