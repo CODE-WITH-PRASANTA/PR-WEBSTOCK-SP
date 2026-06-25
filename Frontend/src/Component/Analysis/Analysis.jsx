@@ -3,7 +3,7 @@ import "./Analysis.css";
 import { FaThLarge } from "react-icons/fa";
 import { GiProcessor } from "react-icons/gi";
 import demoVideo from "../../assets/v-01.mp4";
-
+ 
 const Analysis = () => {
   return (
     <section className="analysis-section">

@@ -146,12 +146,13 @@
 }
 
 .check {
-  background: #d8bdf7;
+  background: lightblue;
+  color: black;
 }
 
 .cross {
-  background: #1f1b23;
-  color: white;
+  background: lightblue;
+  color: black;
 }
 
 /* Purchase Button */
@@ -161,7 +162,7 @@
   height: 58px;
   border-radius: 50px;
   border: 1.5px solid #222;
-  background: #d3bbea;
+  background: lightblue;
   color: #1d1823;
   font-size: 22px;
   font-weight: 600;

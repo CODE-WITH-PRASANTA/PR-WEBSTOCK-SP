@@ -11,12 +11,12 @@
 }
 
 .introducing-container {
-  max-width: 1450px;
+  max-width: 1350px;
   margin: auto;
-
+  
   display: grid;
-  grid-template-columns: 420px 1fr;
-  gap: 90px;
+  grid-template-columns: 450px 1fr;
+  gap: 80px;
 }
 
 /* LEFT SIDE */
@@ -27,7 +27,7 @@
 }
 
 .left-content h2 {
-  color: #fff;
+  color: lightblue;
   font-size: 58px;
   line-height: 1.05;
   font-weight: 700;
@@ -75,11 +75,11 @@
 }
 
 .testimonial-card {
-  background: #dcc8f3;
+  background: lightblue;
   border-radius: 28px;
   padding: 35px 40px 35px 95px;
   position: relative;
-
+  
   transition: all 0.4s ease;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
@@ -94,12 +94,12 @@
   left: 25px;
   top: 32px;
 
-  font-size: 42px;
+  font-size: 40px;
   color: #221b2a;
 }
 
 .card-content h3 {
-  font-size: 24px;
+  font-size: 17px;
   line-height: 1.65;
   font-weight: 600;
   color: #171717;
@@ -113,7 +113,7 @@
 }
 
 .author h4 {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   color: #221b2a;
   margin-bottom: 6px;
