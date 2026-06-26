@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-import Navbar from "../../Component/Navbar/Navbar";
+
 import MainHome from "../../Component/MainHome/MainHome";
 import MordenIdea from "../../Component/MordenIdea/MordenIdea";
 import BusinessIdea from "../../Component/BusinessIdea/BusinessIdea";
@@ -13,13 +13,13 @@ import Plans from "../../Component/Plans/Plans";
 import Questions from "../../Component/Questions/Questions";
 import Marketing from "../../Component/Marketing/Marketing";
 
-import Footer from "../../Component/Footer/Footer";
+
 
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
+     
 
       <MainHome />
       <MordenIdea />
@@ -32,7 +32,7 @@ const Home = () => {
       <Questions />
       <Marketing />
       
-      <Footer />
+      
     </div>
   );
 };
