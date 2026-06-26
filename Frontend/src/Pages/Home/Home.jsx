@@ -14,7 +14,7 @@ import Questions from "../../Component/Questions/Questions";
 import Marketing from "../../Component/Marketing/Marketing";
 
 import Footer from "../../Component/Footer/Footer";
-import Floating from "../../Component/Floating/Floating";
+
 
 const Home = () => {
   return (
@@ -31,7 +31,6 @@ const Home = () => {
       <Plans />
       <Questions />
       <Marketing />
-      <Floating /> 
       
       <Footer />
     </div>
