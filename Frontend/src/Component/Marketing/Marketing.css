@@ -9,7 +9,7 @@
   padding: 90px 6%;
   background: #fff;
 }
-
+ 
 .marketing-wrapper {
   max-width: 1450px;
   margin: auto;
@@ -135,7 +135,7 @@
   border-radius: 50%;
   border: 2px solid #201b24;
 
-  background: #d9c0f5;
+  background: lightblue;
   color: #201b24;
 
   font-size: 44px;

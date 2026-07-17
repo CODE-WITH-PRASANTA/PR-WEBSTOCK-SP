@@ -4,7 +4,7 @@ import { FaCheck, FaTimes } from "react-icons/fa";
 
 const Plans = () => {
   const [yearly, setYearly] = useState(false);
-
+ 
   const plans = [
     {
       title: "Basic",

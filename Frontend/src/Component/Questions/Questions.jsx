@@ -7,7 +7,7 @@ import {
   FaPlus,
   FaMinus,
 } from "react-icons/fa";
-
+ 
 const Questions = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
