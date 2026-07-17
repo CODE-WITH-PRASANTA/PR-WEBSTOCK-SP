@@ -1,213 +1,243 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* --- Global Container --- */
 .introducing {
-  width: 100%;
-  background: #17131f;
-  padding: 110px 6%;
+  padding: 100px 5%;
+  background-color: #ffffff;
+  position: relative;
 }
 
 .introducing-container {
-  max-width: 1350px;
-  margin: auto;
-  
   display: grid;
-  grid-template-columns: 450px 1fr;
-  gap: 80px;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-/* LEFT SIDE */
-
-.left-content {
-  position: sticky;
-  top: 120px;
+/* --- Left Side Content --- */
+.left-side h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  color: #0f172a;
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
-.left-content h2 {
-  color: lightblue;
-  font-size: 58px;
-  line-height: 1.05;
-  font-weight: 700;
-  margin-bottom: 28px;
+.left-side p {
+  color: #64748b;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 35px;
 }
 
-.left-content p {
-  color: rgba(255,255,255,0.75);
-  font-size: 18px;
-  line-height: 1.8;
-  max-width: 360px;
-  margin-bottom: 50px;
+.rating-box {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  display: inline-block;
 }
 
-.rating {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-}
+.stars { color: #f59e0b; font-size: 22px; display: flex; gap: 4px; }
+.score { font-weight: 800; font-size: 20px; color: #0f172a; margin-top: 10px; display: block; }
+.trust-text { margin-top: 5px; color: #64748b; font-size: 14px; font-weight: 500; }
 
-.stars {
-  color: #d8b8ff;
-  display: flex;
-  gap: 4px;
-}
-
-.score {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.companies {
-  color: rgba(255,255,255,0.75);
-  font-size: 16px;
-}
-
-/* RIGHT SIDE */
-
-.right-side {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
+/* --- Right Side: Testimonial Grid --- */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
 }
 
 .testimonial-card {
-  background: lightblue;
+  background: #ffffff;
+  padding: 35px;
   border-radius: 28px;
-  padding: 35px 40px 35px 95px;
-  position: relative;
-  
-  transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+  transform: translateY(-12px);
+  border-color: #2563eb;
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
 }
 
-.quote {
-  position: absolute;
-  left: 25px;
-  top: 32px;
-
-  font-size: 40px;
-  color: #221b2a;
+.quote-icon {
+  color: #dbeafe;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
-.card-content h3 {
-  font-size: 17px;
-  line-height: 1.65;
-  font-weight: 600;
-  color: #171717;
-  margin-bottom: 28px;
-  max-width: 90%;
+.review-text {
+  font-size: 16px;
+  color: #334155;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-style: italic;
+  flex-grow: 1; /* Ensures equal card height */
 }
 
-.author {
-  border-top: 1px solid rgba(0,0,0,0.12);
-  padding-top: 18px;
+.card-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
 }
 
-.author h4 {
+.stars-review {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.star { color: #f59e0b; font-size: 12px; }
+
+.card-footer h4 {
   font-size: 15px;
-  font-weight: 600;
-  color: #221b2a;
-  margin-bottom: 6px;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0;
+}
+/* ... (Keep previous styles until Pagination) ... */
+
+/* Pagination Styles */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
 }
 
-.author span {
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
+.pagination-controls button {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* Laptop */
+.pagination-controls button:hover:not(:disabled) {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
 
-@media (max-width:1200px) {
+.pagination-controls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-weight: 700;
+  color: #64748b;
+}
+
+/* Extra Polish for Cards */
+.testimonial-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-text {
+  font-size: 15px;
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 25px;
+  min-height: 80px; /* Keeps card height consistent */
+}
+
+
+/* --- Responsive Adjustments --- */
+
+/* 1. Large Laptops/Desktops (1200px+) */
+@media (max-width: 1300px) {
   .introducing-container {
-    grid-template-columns: 360px 1fr;
-    gap: 60px;
-  }
-
-  .left-content h2 {
-    font-size: 48px;
-  }
-
-  .card-content h3 {
-    font-size: 22px;
+    grid-template-columns: 320px 1fr;
+    gap: 40px;
   }
 }
 
-/* Tablet */
-
-@media (max-width:992px) {
+/* 2. Tablets and Small Laptops (992px) */
+@media (max-width: 992px) {
   .introducing-container {
     grid-template-columns: 1fr;
+    text-align: center;
   }
-
-  .left-content {
-    position: relative;
-    top: 0;
+  
+  .left-side {
+    max-width: 600px;
+    margin: 0 auto;
   }
-
-  .left-content p {
-    max-width: 100%;
+  
+  .rating-box {
+    margin: 0 auto 40px;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
-
-@media (max-width:768px) {
+/* 3. Mobile Portrait (600px) */
+@media (max-width: 600px) {
   .introducing {
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
-
-  .left-content h2 {
-    font-size: 38px;
+  
+  .left-side h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
-
+  
+  .left-side p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .testimonial-grid {
+    grid-template-columns: 1fr; /* Single column stack */
+    gap: 20px;
+  }
+  
   .testimonial-card {
-    padding: 28px 24px 28px 70px;
-    border-radius: 22px;
+    padding: 25px;
+    border-radius: 20px;
   }
-
-  .quote {
-    left: 18px;
-    top: 24px;
-    font-size: 34px;
+  
+  .review-text {
+    font-size: 14px;
+    min-height: auto; /* Remove fixed height for better mobile flow */
+    margin-bottom: 20px;
   }
-
-  .card-content h3 {
-    font-size: 18px;
-    line-height: 1.7;
-    max-width: 100%;
-  }
-
-  .author h4 {
-    font-size: 16px;
-  }
-
-  .author span {
-    font-size: 13px;
+  
+  .pagination-controls {
+    margin-top: 30px;
   }
 }
 
-/* Small Mobile */
-
-@media (max-width:480px) {
-  .left-content h2 {
-    font-size: 30px;
+/* 4. Extra Small Devices (Small phones) */
+@media (max-width: 375px) {
+  .left-side h2 {
+    font-size: 28px;
   }
-
-  .card-content h3 {
-    font-size: 16px;
-  }
-
-  .companies {
-    font-size: 14px;
+  
+  .pagination-controls button {
+    width: 40px;
+    height: 40px;
   }
 }

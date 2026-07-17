@@ -1,15 +1,20 @@
 import React from "react";
 import "./BusinessIdea.css";
 
-import businessImg from "../../assets/bus img.jpg"; // Your Image
+import businessImg from "../../assets/Company Details.webp";
 
 import {
-  FaChartLine,
-  FaLayerGroup,
+  FaBuilding,
+  FaGlobe,
   FaArrowRight,
 } from "react-icons/fa";
 
 const BusinessIdea = () => {
+
+  const whatsappMessage = encodeURIComponent(
+    "Hello PR WEBSTOCK, I would like to build a website for my business. Please share your packages."
+  );
+
   return (
     <section className="businessidea">
 
@@ -22,17 +27,19 @@ const BusinessIdea = () => {
           <div className="businessidea_box">
 
             <div className="businessidea_icon">
-              <FaChartLine />
+              <FaBuilding />
             </div>
 
             <div>
-              <h2>Transform business</h2>
+
+              <h2>Trusted & Registered Company</h2>
 
               <p>
-                Etiam malesuada fringilla tempus. Curabitur finibus
-                vulputate odio vitae imperdiet. Nulla id justo nisl.
-                Vestibulum molestie.
+                PR WEBSTOCK (OPC) PVT LTD is a registered website
+                development company delivering professional, secure,
+                and modern business websites for clients across India.
               </p>
+
             </div>
 
           </div>
@@ -40,25 +47,33 @@ const BusinessIdea = () => {
           <div className="businessidea_box">
 
             <div className="businessidea_icon">
-              <FaLayerGroup />
+              <FaGlobe />
             </div>
 
             <div>
-              <h2>Smart Integration</h2>
+
+              <h2>Websites for Every Business</h2>
 
               <p>
-                Nulla id justo nisl. Vestibulum molestie iaculis
-                porttitor. Ut vitae vehicula nibh, rhoncus mattis purus
-                vitae imperdiet.
+                We build websites for Schools, Real Estate,
+                Companies, NGOs, Hospitals, Restaurants,
+                Startups, E-Commerce Stores, Portfolios,
+                Hotels, Consultants and many more.
               </p>
+
             </div>
 
           </div>
 
-          <button className="businessidea_btn">
-            Start Now
+          <a
+            href={`https://wa.me/917789801327?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="businessidea_btn"
+          >
+            Contact Us
             <FaArrowRight />
-          </button>
+          </a>
 
         </div>
 
@@ -68,7 +83,7 @@ const BusinessIdea = () => {
 
           <img
             src={businessImg}
-            alt="Business"
+            alt="PR WEBSTOCK"
             className="businessidea_image"
           />
 
@@ -77,13 +92,19 @@ const BusinessIdea = () => {
             <div className="businessidea_card_top">
 
               <div>
-                <span>ALL MONTH</span>
-                <h2>$3500</h2>
+
+                <span>MCA VERIFIED</span>
+
+                <h2>PR WEBSTOCK</h2>
+
               </div>
 
               <div className="businessidea_total">
-                <h3>Total</h3>
-                <h3>Amount</h3>
+
+                <h3>OPC</h3>
+
+                <h3>PVT LTD</h3>
+
               </div>
 
             </div>
@@ -91,12 +112,11 @@ const BusinessIdea = () => {
             <div className="businessidea_card_bottom">
 
               <p>
-                Lorem ipsum dolor sit amet,
-                consectetur.
+                CIN : U62010OD2025OPC051339
               </p>
 
               <div className="businessidea_number">
-                5
+                ✓
               </div>
 
             </div>

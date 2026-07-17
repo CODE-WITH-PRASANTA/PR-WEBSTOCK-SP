@@ -103,33 +103,37 @@ body{
     transform:translate(-4px,-4px);
     box-shadow:4px 4px 0 #000;
 }
-
 /* ================= Right ================= */
-
-.mainhome_right{
-    flex:1;
-    position:relative;
+.mainhome_right {
+    flex: 1;
+    position: relative;
+    display: flex; /* Ensures alignment context */
+    align-items: center;
+    justify-content: center;
+    padding-left: 65px; /* Adds space to accommodate the floating play_wrapper */
 }
 
-.office_img{
-    width:100%;
-    border-radius:25px;
-    display:block;
+.office_img {
+    width: 100%;
+    max-width: 900px; /* Prevents the image from becoming too large */
+    height: auto;
+    border-radius: 25px;
+    display: block;
+    object-fit: cover; /* Keeps image proportions correct */
 }
 
 /* ================= Play ================= */
-
-.play_wrapper{
-    position:absolute;
-    left:-65px;
-    top:0;
-    width:120px;
-    height:100%;
-    background:#eef7ff;
-    border-radius:20px 0 0 20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.play_wrapper {
+    position: absolute;
+    left: 0; /* Aligns to the left of the .mainhome_right container */
+    top: 50%;
+    transform: translateY(-50%); /* Perfectly centers it vertically */
+    width: 120px;
+    height: 120px; /* Set fixed dimensions */
+    background: transparent; /* Changed from background to keep it clean */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rotate_circle{
@@ -213,98 +217,266 @@ body{
     to{transform:rotate(360deg);}
 }
 
-/* ================= Responsive ================= */
 
-@media(max-width:992px){
+/* ===========================
+   Responsive Design
+=========================== */
 
-.mainhome_container{
-    flex-direction:column;
-}
+/* Large Tablet */
 
-.mainhome_left{
-    text-align:center;
-}
+@media (max-width: 1200px) {
 
-.mainhome_left p{
-    margin:auto;
-}
+    .mainhome{
+        padding:70px 5%;
+    }
 
-.mainhome_buttons{
-    justify-content:center;
-}
+    .mainhome_left h1{
+        font-size:54px;
+    }
 
-.play_wrapper{
-    display:none;
-}
+    .mainhome_left p{
+        font-size:17px;
+    }
 
-.mainhome_stats{
-    flex-direction:column;
-    text-align:center;
-}
+    .play_wrapper{
+        left:-45px;
+        width:90px;
+    }
 
-.stat{
-    flex-direction:column;
-}
+    .rotate_circle{
+        width:130px;
+        height:130px;
+    }
 
-}
+    .stat h2{
+        font-size:48px;
+    }
 
-@media(max-width:768px){
-
-.mainhome{
-    padding:60px 20px;
-}
-
-.mainhome_left h1{
-    font-size:42px;
-}
-
-.mainhome_left p{
-    font-size:16px;
-}
-
-.start_btn,
-.view_btn{
-    width:240px;
-}
-
-.stat h2{
-    font-size:42px;
-}
+    .stat h4{
+        font-size:22px;
+    }
 
 }
 
-@media(max-width:480px){
 
-.mainhome_tag{
-    font-size:12px;
-    padding:10px 20px;
+/* Tablet */
+
+@media (max-width:992px){
+
+    .mainhome_container{
+        flex-direction:column;
+        gap:50px;
+    }
+
+    .mainhome_left{
+        order:2;
+        text-align:center;
+    }
+
+    .mainhome_left p{
+        max-width:100%;
+    }
+
+    .mainhome_buttons{
+        justify-content:center;
+    }
+
+    .mainhome_right{
+        order:1;
+        width:100%;
+    }
+
+    .office_img{
+        width:100%;
+    }
+
+    .play_wrapper{
+        left:20px;
+        top:20px;
+        width:80px;
+        height:80px;
+        border-radius:50%;
+        background:#ffffff;
+        box-shadow:0 10px 30px rgba(0,0,0,.1);
+    }
+
+    .rotate_circle{
+        width:80px;
+        height:80px;
+    }
+
+    .rotate_circle text{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .play_button{
+        width:26px;
+        height:26px;
+        font-size:11px;
+    }
+
+    .mainhome_stats{
+        flex-direction:column;
+        gap:30px;
+        padding:35px;
+    }
+
 }
 
-.mainhome_left h1{
-    font-size:32px;
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .mainhome{
+        padding:60px 20px;
+    }
+
+    .mainhome_tag{
+        font-size:12px;
+        padding:10px 20px;
+        letter-spacing:1px;
+    }
+
+    .mainhome_left h1{
+        font-size:40px;
+        line-height:1.2;
+    }
+
+    .mainhome_left p{
+        font-size:16px;
+        line-height:1.7;
+    }
+
+    .mainhome_buttons{
+        width:100%;
+    }
+
+    .start_btn{
+        width:100%;
+        text-align:center;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-decoration:none;
+        padding:16px;
+    }
+
+    .office_img{
+        border-radius:20px;
+    }
+
+    .play_wrapper{
+        left:15px;
+        top:15px;
+        width:70px;
+        height:70px;
+    }
+
+    .rotate_circle{
+        width:70px;
+        height:70px;
+    }
+
+    .rotate_circle text{
+        font-size:6px;
+        letter-spacing:1.5px;
+    }
+
+    .play_button{
+        width:24px;
+        height:24px;
+        font-size:10px;
+    }
+
+    .mainhome_stats{
+        margin-top:50px;
+        padding:25px;
+        gap:25px;
+    }
+
+    .stat{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .stat h2{
+        font-size:42px;
+    }
+
+    .stat h4{
+        font-size:20px;
+    }
+
+    .stat p{
+        font-size:15px;
+    }
+
 }
 
-.mainhome_buttons{
-    flex-direction:column;
-    align-items:center;
-}
 
-.start_btn,
-.view_btn{
-    width:100%;
-    max-width:260px;
-}
+/* Small Mobile */
 
-.mainhome_stats{
-    padding:30px 20px;
-}
+@media (max-width:480px){
 
-.stat h2{
-    font-size:36px;
-}
+    .mainhome{
+        padding: 30px 16px;
+    }
 
-.stat h4{
-    font-size:20px;
-}
+    .mainhome_left h1{
+        font-size:32px;
+    }
+
+    .mainhome_left p{
+        font-size:15px;
+    }
+
+    .mainhome_tag{
+        font-size:11px;
+        padding:8px 16px;
+    }
+
+    .start_btn{
+        font-size:15px;
+        padding:14px;
+    }
+
+    .play_wrapper{
+        width:60px;
+        height:60px;
+    }
+
+    .rotate_circle{
+        width:60px;
+        height:60px;
+    }
+
+    .rotate_circle text{
+        display:none;
+    }
+
+    .play_button{
+        width:30px;
+        height:30px;
+        font-size:12px;
+    }
+
+    .mainhome_stats{
+        padding:20px;
+        border-radius:20px;
+    }
+
+    .stat h2{
+        font-size:34px;
+    }
+
+    .stat h4{
+        font-size:18px;
+    }
+
+    .stat p{
+        font-size:14px;
+    }
 
 }

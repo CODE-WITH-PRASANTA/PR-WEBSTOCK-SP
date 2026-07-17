@@ -1,7 +1,7 @@
 import React from "react";
 import "./MordenIdea.css";
 
-import dashboardImg from "../../assets/pr img1.png";
+import dashboardImg from "../../assets/why-need.webp";
 
 import {
   FaSearch,
@@ -17,9 +17,9 @@ const MordenIdea = () => {
 
       <div className="mordenidea_heading">
         <h2>
-          Achieve Results With
+          Why Your Business
           <br />
-          Modern Ideas
+          Needs a Website
         </h2>
       </div>
 
@@ -37,83 +37,76 @@ const MordenIdea = () => {
 
             <img
               src={dashboardImg}
-              alt="Dashboard"
+              alt="Business Website Dashboard"
               className="mordenidea_dashboard"
             />
 
-            {/* Search Icon */}
-
-            <div className="mordenidea_search">
-              <FaSearch />
-            </div>
-
-            {/* Floating Overview Card */}
+        
+            {/* Floating Growth Card */}
 
             <div className="mordenidea_overview">
 
               <div className="progressCircle">
-                <span>15%</span>
+                <span>100%</span>
               </div>
 
               <div className="overviewText">
-                <h4>Overview</h4>
-                <p>audience</p>
+                <h4>Business Growth</h4>
+                <p>Online Presence</p>
               </div>
 
               <FaChevronRight className="overviewArrow" />
 
             </div>
 
-            {/* Read More */}
-
-            <div className="mordenidea_readmore">
-
-              <span>Read More</span>
-
-              <button>
-                <FaChevronDown />
-              </button>
-
-            </div>
 
           </div>
 
         </div>
 
-        {/* ================= Right ================= */}
+    <div className="mordenidea_right">
 
-        <div className="mordenidea_right">
+        <h3>Why Does Your Business Need a Website?</h3>
 
-          <h3>All Your Business Finances</h3>
+        <p className="mordenidea_description">
+          A website is your online office. It helps people find your business,
+          builds trust, and brings more customers. Your business stays online
+          24/7 and is always ready for new opportunities.
+        </p>
 
-          <p className="mordenidea_description">
-            Nulla id justo nisl. Vestibulum molestie iaculis porttitor.
-            Ut vitae vehicula nibh, rhoncus mattis.
+        <div className="mordenidea_item">
+
+          <h1>01</h1>
+
+          <p>
+            Get found on Google, showcase your services, products and contact
+            details, and turn visitors into customers with a professional website.
           </p>
 
-          <div className="mordenidea_item">
+        </div>
 
-            <h1>01</h1>
+        <div className="mordenidea_item">
 
-            <p>
-              Suspendisse rutrum massa quis lacinia consectetur.
-              Fusce mattis.
-            </p>
+          <h1>02</h1>
 
-          </div>
-
-          <div className="mordenidea_item">
-
-            <h1>02</h1>
-
-            <p>
-              Lacinia tortor, sed pharetra ante commodo a.
-              Mauris non ipsum ex.
-            </p>
-
-          </div>
+          <p>
+            We create fast, secure and mobile-friendly websites for Real Estate,
+            Schools, NGOs, Startups, Companies, Restaurants, Hospitals,
+            E-Commerce, and all types of businesses.
+          </p>
 
         </div>
+
+        <a
+          href="https://wa.me/917789801327?text=Hello%20PR%20WEBSTOCK,%20I%20want%20to%20create%20a%20website%20for%20my%20business."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mordenidea_btn"
+        >
+          Contact Us
+        </a>
+
+      </div>
 
       </div>
 

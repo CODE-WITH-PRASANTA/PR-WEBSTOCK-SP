@@ -1,119 +1,82 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Plans.css";
-import { FaCheck, FaTimes } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 
 const Plans = () => {
-  const [yearly, setYearly] = useState(false);
- 
+  const whatsapp = (plan) => {
+    const message = encodeURIComponent(
+      `Hello PR WEBSTOCK,\n\nI'm interested in the ${plan} package. Please share complete details.`
+    );
+    window.open(`https://wa.me/917789801327?text=${message}`, "_blank");
+  };
+
   const plans = [
     {
-      title: "Basic",
-      subtitle: "For personal use",
-      monthly: 20,
-      yearly: 200,
-      features: [
-        { text: "10 artboards", active: true },
-        { text: "Access to all tools", active: true },
-        { text: "Unlimited stock photos", active: true },
-        { text: "Unlimited stock photos", active: true },
-        { text: "Team Space", active: false },
-        { text: "Multiple export options", active: false },
-      ],
+      title: "Single Page Website",
+      subtitle: "Perfect for Startups",
+      price: "₹7,999",
+      tag: "Starting From",
+      emi: "EMI starts at ₹1,333/mo",
+      features: ["Premium Landing Page", "Mobile Responsive", "WhatsApp Chat Button", "Contact Form", "Basic SEO", "Fast Loading"],
     },
     {
-      title: "Team",
-      subtitle: "For small teams and companies",
-      monthly: 40,
-      yearly: 400,
-      features: [
-        { text: "10 artboards", active: true },
-        { text: "Access to all tools", active: true },
-        { text: "Unlimited stock photos", active: true },
-        { text: "Team space", active: true },
-        { text: "Multiple export options", active: true },
-        { text: "1 website", active: false },
-      ],
+      title: "Multi-Page Website",
+      subtitle: "Best for Growing Businesses",
+      price: "₹13,999",
+      tag: "Starting From",
+      popular: true,
+      emi: "EMI starts at ₹1,166/mo (12 months)",
+      features: ["Up to 10 Custom Pages", "Premium UI Design", "SEO Friendly", "Inquiry Forms", "Google Analytics", "1 Month Support"],
     },
     {
-      title: "Pro Plan",
-      subtitle: "For big teams and companies",
-      monthly: 60,
-      yearly: 600,
-      features: [
-        { text: "10 artboards", active: true },
-        { text: "Access to all tools", active: true },
-        { text: "Unlimited stock photos", active: true },
-        { text: "Team space", active: true },
-        { text: "Multiple export options", active: true },
-        { text: "1 website", active: false },
-      ],
+      title: "ERP Solution",
+      subtitle: "Complete Management System",
+      price: "₹20,999",
+      tag: "Starting From",
+      emi: "EMI starts at ₹1,750/mo (12 months)",
+      features: ["Custom Admin Dashboard", "Employee Management", "Reports & Analytics", "Role-Based Login", "Secure Cloud", "Priority Support"],
     },
   ];
 
   return (
-    <section className="plans-section">
-      <div className="plans-header">
-        <div className="plans-icon">✧</div>
-
-        <h2>
-          Tailored Pricing Plans
-          <br />
-          Designed For You
+    <section className="plans-container">
+      <div className="plans-header-wrapper">
+        <div className="plans-icon-badge">💼</div>
+        <h2 className="plans-main-title">
+          Choose the Right Website <br />
+          Package for Your Business
         </h2>
-
-        <div className="payment-toggle">
-          <span className={!yearly ? "active-text" : ""}>
-            Monthly Payment
-          </span>
-
-          <div
-            className={`toggle-switch ${yearly ? "yearly" : ""}`}
-            onClick={() => setYearly(!yearly)}
-          >
-            <div className="toggle-circle"></div>
-          </div>
-
-          <span className={yearly ? "active-text" : ""}>
-            Yearly Payment
-          </span>
-        </div>
+        <p className="plans-description">
+          Affordable pricing with premium quality. Select the perfect website package and start growing your business online today.
+        </p>
       </div>
 
-      <div className="plans-grid">
+      <div className="plans-cards-grid">
         {plans.map((plan, index) => (
-          <div className="plan-card" key={index}>
-            <h3>{plan.title}</h3>
+          <div className={`plan-card-item ${plan.popular ? "is-popular" : ""}`} key={index}>
+            
+            {plan.popular && <div className="popular-status-badge">⭐ Most Popular</div>}
 
-            <p className="plan-subtitle">{plan.subtitle}</p>
+            <h3 className="plan-card-title">{plan.title}</h3>
+            <p className="plan-card-subtitle">{plan.subtitle}</p>
 
-            <div className="price-box">
-              <span className="price">
-                {yearly ? plan.yearly : plan.monthly}$
-              </span>
-
-              <span className="month">
-                {yearly ? "/Year" : "/Month"}
-              </span>
+            <div className="plan-pricing-wrapper">
+              <span className="price-tag-label">{plan.tag}</span>
+              <h1 className="plan-price-amount">{plan.price}</h1>
+              <p className="plan-emi-highlight">{plan.emi}</p>
             </div>
 
-            <ul className="features-list">
-              {plan.features.map((item, i) => (
-                <li key={i}>
-                  <span
-                    className={`feature-icon ${
-                      item.active ? "check" : "cross"
-                    }`}
-                  >
-                    {item.active ? <FaCheck /> : <FaTimes />}
-                  </span>
-
-                  {item.text}
+            <ul className="plan-features-list">
+              {plan.features.map((feature, i) => (
+                <li key={i} className="feature-item">
+                  <FaCheck className="feature-check-icon" />
+                  {feature}
                 </li>
               ))}
             </ul>
 
-            <button className="purchase-btn">
-              Purchase
+            <button className="discuss-cta-button" onClick={() => whatsapp(plan.title)}>
+              Discuss With Us
             </button>
           </div>
         ))}
